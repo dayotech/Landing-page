@@ -1,0 +1,97 @@
+@use "colors";
+@use "media-queries";
+
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    background-color: colors.$light;
+    height: 80px;
+    @extend %align-center;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    z-index: 10;
+
+    &__logo {
+        color: colors.$orangeRed;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        @extend %align-center;
+    }
+
+    &__bars {
+        display: none;
+
+        div {
+            width: 25px;
+            height: 3px;
+            margin: 5px 10px;
+            cursor: pointer;
+            background-color: colors.$dark;
+        }
+
+        @include media-queries.tablet {
+            display: block;
+        }
+    }
+
+    &__menu {
+        @extend %align-center;
+        justify-content: center;
+        list-style: none;
+        margin-right: 24px;
+
+        @include media-queries.tablet {
+            display: none;
+        }
+
+        &--links {
+            color: colors.$dark;
+            @extend %align-center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0 1rem;
+
+            &:hover {
+                color: colors.$orangeRed;
+                transition: all 0.3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+            }
+        }
+
+        #button {
+            padding: 12px 24px;
+            border: none;
+            outline: none;
+            color: colors.$light;
+            background: colors.$darkBlue;
+            margin-left: 16px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+
+            &:hover {
+                background: colors.$orangeRed;
+                transition: all 0.3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+
+
+
+

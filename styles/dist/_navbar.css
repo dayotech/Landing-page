@@ -1,0 +1,78 @@
+.navbar__menu--links, .navbar__menu, .navbar__logo, .navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #f7f7f7;
+  height: 80px;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+}
+.navbar__logo {
+  color: #fb4e4b;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.navbar__bars {
+  display: none;
+}
+.navbar__bars div {
+  width: 25px;
+  height: 3px;
+  margin: 5px 10px;
+  cursor: pointer;
+  background-color: #222121;
+}
+@media screen and (max-width: 768px) {
+  .navbar__bars {
+    display: block;
+  }
+}
+.navbar__menu {
+  justify-content: center;
+  list-style: none;
+  margin-right: 24px;
+}
+@media screen and (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+.navbar__menu--links {
+  color: #222121;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+.navbar__menu--links:hover {
+  color: #fb4e4b;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.navbar__menu #button {
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+  color: #f7f7f7;
+  background: #000033;
+  margin-left: 16px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.navbar__menu #button:hover {
+  background: #fb4e4b;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
